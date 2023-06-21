@@ -1,0 +1,885 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$pozadina:#111010;
+$plavo:#663de4;
+$zuto:#eaff01;
+@mixin flexwrap(){
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: $pozadina;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.bitno{
+    color: $plavo;
+}
+#header{
+    width:100%;
+    position: fixed;
+    height: 11vh;
+    background-color: $pozadina;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    color: $zuto;
+    align-items: center;
+    font-size: 30px;
+    border-bottom: 1px solid $plavo;
+    z-index: 3;
+    a{
+        color:$zuto;
+    }
+    i{
+        visibility: hidden;
+    }
+    .nav ul{
+        @include flexwrap();
+        margin-top: 30px;
+        li{
+            padding: 10px;
+            a:after{
+                content: '';
+                width: 0;
+                height: 3px;
+                background-color: #eaff01;
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                transition: 0.7s;
+            }
+            a:hover:after{
+                width: 100%;
+            }
+        }
+    a{
+        position: relative;
+        color: $zuto;
+    }
+    }
+}
+.container{
+    width: 100%;
+}
+#cover{
+    width: 100%;
+    height: 90vh;
+    background-color: $pozadina;
+    @include flexwrap();
+    .naslovc{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-shadow: 1px 1px #111010;
+        animation-name: zoomIn;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        h1{
+            font-size: 70px;
+           }
+        p{
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+    .slikac{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: zoomIn;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        .socialc{
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+            padding: 10px;
+            a{
+                color: $plavo;
+                display: inline-block;
+                transition: color 0.7s, transform 0.7s;
+            }
+            &a:hover{
+                transform: translateY(-5px);
+                color:#5323e1;
+            }
+        }
+    }
+    img{
+        border-radius: 5%;
+    }
+
+}
+#about{
+    width: 90%;
+    height: 90vh;
+    @include flexwrap();
+    margin: 0px auto;
+    .teksta{
+        width: 50%;
+        height: 70vh;
+        text-align: center;
+        color: #fff;
+        margin-top: 100px;
+        h1{
+            font-size: 50px;
+            text-align: center;
+        }
+        h2{
+            font-size: 40px;
+        }
+        h3,h4{
+            font-size: 30px;
+        }
+        p{
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    }
+}
+#skills{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        margin-top: 20px;
+    }
+    .progress-bar{
+        width: 80%;
+        height: 30px;
+        background-color: #363434;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .progress1{
+        height: 100%;
+        background-color: #FFD400;
+        animation: fill-progress1 5s forwards infinite;
+        border-radius: 10px;
+    }
+    .progress2{
+        height: 100%;
+        background-color: #FFD400;
+        animation: fill-progress2 5s forwards infinite;
+        border-radius: 10px;
+    }
+    .progress3{
+        height: 100%;
+        background-color: #FFD400;
+        animation: fill-progress3 5s forwards infinite;
+        border-radius: 10px;
+    }
+    @keyframes fill-progress1 {
+        from { width: 0; }
+        to { width: 90%; }
+    }
+    @keyframes fill-progress2 {
+        from { width: 0; }
+        to { width: 87%; }
+    }
+    @keyframes fill-progress3 {
+        from { width: 0; }
+        to { width: 70%; }
+    }
+}
+#projects{
+    width: 90%;
+    margin: 0px auto;
+    height: 80vh;
+    @include flexwrap();
+    background-color: #111010;
+    .projekat1{
+        width: 40%;
+        height: 60vh;
+        margin: 10vh auto;
+        background-color: #111010;
+        border-radius: 10px;
+        img{
+            width: 100%;
+            height: 54vh;
+            border-radius: 10px;
+            margin-top: 2vh;
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px #000;
+        }
+    }
+}
+.projects h1{
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+.services h1{
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+#services{
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #111010;
+    margin: 0px auto;
+    .service{
+        width: 30%;
+        margin: 80px auto;
+        height: 65vh;
+        background-color: #1d1d1d;
+        padding: 50px;
+        font-size: 25px;
+        color: #fff;
+        text-shadow: 1px 1px #000;
+        transition: background 0.7s, transform 0.7s;
+        i{
+            font-size: 50px;
+            float: right;
+        }
+    }
+    .service:hover{
+        background: $plavo;
+        transform: translateY(-10px);
+    }
+}
+#contact{
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #111010;
+    margin: 0px auto;
+    .contactlevo,.contactdesno{
+        width: 45%;
+        height: 80vh;
+        background-color: $pozadina;
+        margin:0px auto;
+    }
+    .contactlevo h1{
+        font-size: 60px;
+        color: #fff;
+        text-shadow: 1px 1px #000;
+    }
+    .contactlevo p{
+        font-size: 30px;
+        color:#fff;
+        text-shadow: 1px 1px #000;
+        padding: 30px;
+        i{
+            padding: 10px;
+            color: $plavo;
+        }
+    }
+    .contactlevo button{
+        width: 50%;
+    }
+}   
+.socialcl{
+    margin-left: 20px;
+    font-size: 50px;
+    color: #fff;
+    padding: 30px;
+    i{
+        padding-right: 20px;
+    }
+    a{
+        color:#663de4;
+        display: inline-block;
+        transition: color 0.7s, transform 0.7s;
+    }
+    a:hover{
+        transform: translateY(-5px);
+        color:#5323e1;
+    }
+}
+.buttoncv{
+    display: inline-block;
+    background-color: #663de4;
+    color: #fff;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    margin-left: 50px;
+    transition: background-color 0.7s;
+}
+.buttoncv:hover{
+    background-color: #5323e1;
+}
+.contactdesno form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #363434;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.contactdesno h1{
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+button{
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    background-color: #663de4;
+    outline: none;
+    border-radius: 5px;
+    border-style: none;
+    transition: background-color 0.7s;
+}
+button:hover{
+    background-color: #5323e1;
+}
+#footer{
+    width: 100%;
+    height: 6vh;
+    background-color: #111010;
+    margin: 0px auto;
+    text-align: center;
+    border-top: 1px solid #663de4;
+    color: #fff;
+    .ikonicef{
+        font-size: 30px;
+        a{
+            color: $zuto;
+        }
+    }
+}
+.scroll-up-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: $zuto;
+    border-radius: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.7s;
+  }
+  .scroll-up-button:hover {
+    background-color: #FFD400;
+  }
+  .scroll-up-button:active {
+    transform: translateY(-5px);
+  }
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+    }
+    @keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+    } 
+@media only screen and (max-width:700px) {
+    #header{
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+        position: relative;
+        width: 100%;
+        h1{
+            font-size: 30px;
+        }
+        i{
+            visibility: visible;
+        }
+        .nav ul{
+            display: flex;
+            flex-direction: column;
+            background-color: $pozadina;
+            position: fixed;
+            margin-top: -30px;
+            right: -150px;
+            width: 150px;
+            height: 100vh;
+            z-index: 2;
+            transition: right 0.7s;
+            border-left: 1px solid $zuto;
+            li{
+                font-size: 20px;
+                padding-left:10px;
+                padding-top: 20px;
+                margin-top: 0px;
+            }
+        }
+    }
+    .nav .fa-x{
+        position: absolute;
+        top:350px;
+        left: 15px;
+        cursor: pointer;
+        font-size: 23px;
+    }
+    .nav .fa-bars{
+        font-size: 30px;
+        margin: 10px;
+    }
+    #cover{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        .naslovc{
+            width: 100%;
+            height: 40vh;
+            text-align: center;
+            h1{
+                font-size: 30px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+        .slikac{
+            height: 50vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .socialc{
+                display: flex;
+                flex-direction: row;
+                padding: 0px;
+                width: 100%;
+                justify-content: center;
+                i{
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+    #about{
+        display: flex;
+        flex-direction: column;
+        height: 160vh;
+        .teksta{
+            width: 100%;
+            height: 70vh;
+            h1{
+                font-size: 40px;
+            }
+            h3{
+                font-size: 25px;
+            }
+            h4{
+                font-size: 20px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    #skills{
+        width: 100%;
+        height: 50vh;
+    }
+    .projects{
+        height: 180vh;
+    }
+    #projects{
+        display: flex;
+        flex-direction: column;
+        height: 180vh;
+        .projekat1{
+            width: 100%;
+        }
+    }
+    #services{
+        display: flex;
+        flex-direction: column;
+        height: 250vh;
+        .service{
+            width: 100%;
+            height: 85vh;
+            margin: 10px auto;
+            padding: 30px;
+            h2{
+                font-size: 30px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    #contact{
+        display: flex;
+        flex-direction: column;
+        height: 195vh;
+        .contactlevo{
+            width: 100%;
+            height: 70vh;
+            h1{
+                font-size: 40px;
+            }
+            p{
+                font-size: 14px;
+                padding: 0;
+            }
+            .socialcl{
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                padding: 10px;
+                i{
+                    font-size: 40px;
+                }
+            }
+        }
+        .contactdesno{
+            width: 100%;
+            height: 75vh;
+            h1{
+                font-size: 40px;
+            }
+        }
+    }
+}
+@media only screen and (min-width:280px) and (max-width:300px){
+    #about{
+        height: 200vh;
+        .teksta{
+            height: 100vh;
+        }
+    }
+    #contact{
+        height: 130vh;
+    }
+    #services{
+        height: 330vh;
+        .service{
+            height: 120vh;
+        }
+    }
+}
+@media only screen and (min-width:330px) and (max-width:450px){
+    #services{
+        height: 350vh;
+        .service{
+            height: 110vh;
+            p{
+                font-size: 23px;
+                padding: 10px auto;
+            }
+        }
+    }
+    .naslovc{
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 30px;
+        }
+    }
+    #contact{
+        height:120vh;
+        .contactdesno{
+            height: 40vh;
+        }
+        .contactlevo{
+            height: 55vh;
+            p{
+                font-size: 23px;
+            }
+        }
+
+    }
+    .teksta{
+        height: 60vh;
+    }
+    #about{
+        height: 163vh;
+    }
+    #skills{
+        height: 60vh;
+    }
+    #cover{
+        height: 100vh;
+    }
+}
+@media only screen and (min-width:1024px) and (max-height:600px){
+    #cover{
+        .naslovc{
+            h1{
+                font-size: 40px;
+            }
+            p{
+                font-size: 25px;
+            }
+        }
+    }
+    #about{
+        height: 130vh;
+    }
+    #services{
+        height: 500vh;
+    }
+}
+@media only screen and (min-width:450px) and (max-width:700px){
+    #services{
+        height: 200vh;
+        .service{
+            height: 70vh;
+            p{
+                font-size: 23px;
+            }
+        }
+    }
+    .teksta{
+        height: 60vh;
+    }
+    #skills{
+        height: 50vh;
+    }
+    #about{
+        height: 150vh;
+    }
+    .naslovc{
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 25px;
+        }
+    }
+    #contact{
+        height: 100vh;
+        .contactlevo{
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media only screen and (min-width:701px) and (max-width:1000px){
+    #header{
+        font-size: 15px;
+    }
+    #cover{
+        height: 60vh;
+        .naslovc{
+            height: 70vh;
+            h1{
+                font-size: 35px;
+            }
+            p{
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+        .slikac{
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            .socialc{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+                i{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    #about{
+        height: 70vh;
+    }
+    #projects{
+        height: 60vh;
+        .projekat1{
+            height: 30vh;
+            img{
+                height: 30vh;
+            }
+        }
+    }
+    #services{
+        height: 170vh;
+        .service{
+            height: 140vh;
+            p{
+                font-size: 20px;
+                padding: 0;
+            }
+        }
+    }
+    .socialcl{
+        font-size: 30px;
+    }
+    #contact{
+        height: 66vh;
+        .contactdesno{
+            height: 20vh;
+        }
+        .contactlevo{
+            height: 20vh;
+            p{
+                font-size: 23px;
+            }
+        }
+    }
+}
+@media only screen and (min-width:1000px) and (max-width:1560px){
+    #header{
+        font-size: 20px;
+        h1{
+            font-size: 31px;
+        }
+    }
+    #services{
+        height: 160vh;
+        .service{
+            height: 150vh;
+        }
+    }
+    #cover{
+        .slikac{
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            .socialc{
+                display: flex;
+                flex-direction: row;
+                padding: 0px;
+                width: 100%;
+                justify-content: center;
+                i{
+                    padding-right: 10px;
+                }
+            }
+        }
+        .naslovc{
+            text-align: left;
+        }
+    }
+    #contact{
+        height: 70vh;
+        .contactdesno{
+            height: 40vh;
+        }
+        .contactlevo{
+            height: 40vh;
+        }
+    }
+}
+@media only screen and (min-width:1200px){
+    #services{
+        height: 100vh;
+        .service{
+            height: 80vh;
+        }
+    }
+    #cover{
+        .slikac{
+            display: flex;
+            flex-direction: column;
+            .socialc{
+                display: flex;
+                flex-direction: row;
+                padding: 0px;
+                width: 100%;
+                justify-content: center;
+                i{
+                    padding-right: 10px;
+                }
+            }
+        }
+}
+}
+@media only screen and (max-height:500px){
+    #services{
+        height: 270vh;
+        .service{
+            height: 440vh;
+        }
+    }
+    #contact{
+        height: 170vh;
+    }
+}
+@media only screen and (min-height:500px) and (max-height:800px){
+    #services{
+        height: 310vh;
+        .service{
+            height: 105vh;
+        }
+    }
+    #contact{
+        height: 160vh;
+    }
+}

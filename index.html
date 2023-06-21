@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Portfolio site"/>
+    <meta name="Author" content="Dimitrije Cvijić"/>
+    <title>Dimitrije Cvijić</title>
+    <link rel="stylesheet" href="assets/style/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Roboto+Condensed&display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/23207893f9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<section class="header">
+    <div id="header">
+        <h1><a href="#top">Dimitrije <span class="bitno">Cvijić</span></a></h1>
+        <div class="nav">
+                <ul id="sidemeni">
+                    <li><a href="#top" onclick="closemenu()">HOME</a></li>
+                    <li><a href="#about" onclick="closemenu()">ABOUT ME</a></li>
+                    <li><a href="#skills" onclick="closemenu()">SKILLS</a></li>
+                    <li><a href="#projects" onclick="closemenu()">PROJECTS</a></li>
+                    <li><a href="#services" onclick="closemenu()">SERVICES</a></li>
+                    <li><a href="#contact" onclick="closemenu()">CONTACT</a></li>
+                    <li><i class="fa-solid fa-x" onclick="closemenu()"></i></li>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </div>
+    </div>
+</section>
+<section class="cover">
+    <div id="cover">
+        <div class="naslovc">
+            <h1>Hi, I am <span class="bitno">Dimitrije Cvijić</span> <br/><span class="bitno">Front-End</span> developer</h1>
+            <p>If You want something done <span class="bitno">perfect</span>, contact me!</p>
+
+        </div>
+        <div class="slikac">
+            <img src="assets/imgs/autor.png" alt="Ja"/>
+            <div class="socialc">
+                <a href="https://instagram.com/cvijic__"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="http://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about">
+<div class="container">
+    <div id="about">
+        <div class="teksta">
+            <h1>ABOUT ME</h1>
+            <h3>Index: <span class="bitno">187/22</span></h3>
+            <h4>Hi! I am 20 years old Front-End developer based in Belgrade. Currently I'm student of ICT College of Vocational Studies.</h4>
+            <p>When I was a kid, I developed a keen interest in programming and found great enjoyment in pursuing it as a hobby. <br/>
+                 Exploring the world of coding allowed me to unleash my creativity and problem-solving skills, <br/> and I quickly fell in love with the process of creating something from scratch. <br/>
+                  Those early experiences ignited a lifelong passion for programming that continues to thrive to this day.
+            </p>
+
+        </div>
+        <div id="skills">
+            <div class="skillsl">
+                <h1>SKILLS</h1>
+                <h2>HTML</h2>
+                <div class="progress-bar">
+                    <div class="progress1" style="width: 90%;"></div>
+                </div>
+                <h2>CSS</h2>
+                <div class="progress-bar">
+                    <div class="progress2" style="width: 87%;"></div>
+                </div>
+                <h2>JavaScript</h2>
+                <div class="progress-bar">
+                    <div class="progress3" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section class="projects">
+    <div class="container">
+        <h1>PROJECTS</h1>
+        <div id="projects">
+            <div class="projekat1">
+                <h1>Portfolio</h1>
+                <img src="assets/imgs/projekat1.jpg" alt="Projekat1"/>
+            </div>
+            <div class="projekat1">
+                <h1>Gym Website</h1>
+                <img src="assets/imgs/projekat2.jpg" alt="Projekat2"/>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services">
+    <div class="container">
+        <h1>SERVICES</h1>
+        <div id="services">
+            <div class="service">
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>"Transforming visions into captivating digital experiences,
+                     my web design services blend creativity with functionality to craft user-friendly and visually stunning websites that leave a lasting impression.
+                    With a focus on responsive design, intuitive navigation, and seamless integration, 
+                    I strive to create online platforms that reflect the unique essence and objectives of each client."</p>
+                    <p><a href="#top">Learn more</a></p>
+
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>"Crafting intuitive and delightful user experiences is at the heart of my UI/UX design services.
+                    From wireframing and prototyping to creating visually engaging interfaces,
+                     I specialize in designing seamless interactions that engage and delight users,
+                      while ensuring the utmost usability and accessibility for a memorable digital journey."
+                    </p>
+                    <p><a href="#top">Learn more</a></p>
+
+
+            </div>
+            <div class="service">
+                <i class="fa-sharp fa-solid fa-database"></i>
+                <h2>MySQL</h2>
+                <p>"Unlocking the power of data, my MySQL services offer robust database solutions tailored to your specific needs.
+                     From designing efficient database structures to optimizing queries and ensuring data integrity,
+                      I provide reliable MySQL expertise to help you store, manage, and retrieve information seamlessly,
+                       empowering your applications with scalable and high-performance data management capabilities."</p>
+                    <p><a href="#top">Learn more</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact">
+    <div class="container">
+        <div id="contact">
+            <div class="contactlevo">
+                <h1>CONTACT ME</h1>
+                <p><i class="fa-solid fa-envelope"></i> dimitrije.cvijic.187.22@ict.edu.rs</p>
+                <p><i class="fa-solid fa-phone"></i> 060312322</p>
+                <p><i class="fa-solid fa-map-marker"></i> Belgrade, Serbia</p>
+                <button type="button">Download CV</button>
+                <div class="socialcl">
+                    <a href="https://instagram.com/cvijic__"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="http://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="http://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="contactdesno">
+                <h1>MESSAGE ME</h1>
+                <form>
+                    <input type="text" name="Name" placeholder="Your name" required/>
+                    <input type="email" name="Email" placeholder="Your email"/ required/>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer">
+    <div class="container">
+        <div id="footer">
+            <p>Copyright © 2023 Dimitrije Cvijić</p>
+            <div class="ikonicef">
+                <a href="assets/style/style.css"><i class="fa-brands fa-css3-alt"></i></a>
+                <a href="assets/style/style.scss"><i class="fa-brands fa-sass"></i></a>
+                <a href="rss.xml"><i class="fa-solid fa-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<a href="#" class="scroll-up-button">▲</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var sidemeni=document.getElementById("sidemeni")
+    function openmenu(){
+        sidemeni.style.right="0";
+    }
+    function closemenu(){
+        sidemeni.style.right="-150px";
+    }
+</script>
+</body>
