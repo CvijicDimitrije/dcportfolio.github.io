@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dimitrije Cvijić</title>
+    <link rel="stylesheet" href="assets/style/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@400;600&family=Roboto+Condensed&display=swap" rel="stylesheet"/>
+<script src="https://kit.fontawesome.com/23207893f9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1><span class="bitno1">D</span>imitrije<span class="bitno1">.</span></h1>
+                <ul id="sidemenu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#projects">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fas fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="headertekst">
+                <p>UI/UX Designer</p>
+                <h2>Hi, I'm <span class="bitno1">Dimitrije</span> Cvijić.</h2>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="aboutcol1">
+                    <img src="assets/imgs/aboutslk.png" alt="aboutslika"/>
+                </div>
+                <div class="aboutcol2">
+                    <h1 class="podnaslov">About Me</h1>
+                    <p>Hi! I am 20 years old Front-End developer based in Belgrade. <br>
+                        When I was a kid, I developed a keen interest in programming <br> and found great enjoyment in pursuing it as a hobby. <br>
+                        Exploring the world of coding allowed me to unleash <br> my creativity and problem-solving skills,
+                        and I quickly <br> fell in love with the process of creating something from scratch. <br>
+                        Those early experiences ignited a lifelong passion for programming <br> that continues to thrive to this day.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+                        <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+                        <p class="tab-links"onclick="opentab('education')">EDUCATION</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Designing Web/App interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span class="bitno1">I have</span></li>
+                            <li><p>1 year experience in Web Design</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span class="bitno1">College</span></li>
+                            <li><p>Currently I'm student of ICT College of Vocational Studies.</p></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="podnaslov">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Web Design
+                        "Transforming visions into captivating digital experiences,
+                         my web design services blend creativity with functionality to craft user-friendly and visually stunning websites that leave a lasting impression.
+                          With a focus on responsive design, intuitive navigation, and seamless integration,
+                        I strive to create online platforms that reflect the unique essence and objectives of each client."</p>
+                        <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>"Crafting intuitive and delightful user experiences is at the heart of my UI/UX design services.
+                         From wireframing and prototyping to creating visually engaging interfaces, 
+                         I specialize in designing seamless interactions that engage and delight users,
+                          while ensuring the utmost usability and accessibility for a memorable digital journey."</p>
+                        <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>MySQL</h2>
+                    <p>"Unlocking the power of data, my MySQL services offer robust database solutions tailored to your specific needs.
+                         From designing efficient database structures to optimizing queries and ensuring data integrity,
+                          I provide reliable MySQL expertise to help you store, manage, and retrieve information seamlessly,
+                           empowering your applications with scalable and high-performance data management capabilities."</p>
+                        <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="container">
+            <h1 class="podnaslov">Projects</h1>
+            <div class="projekti">
+                <div class="projekat1">
+                    <img src="assets/imgs/projekat1.jpg" alt="Projekat 1"/>
+                    <div class="layer">
+                        <h3>Gym Website</h3>
+                        <p>I made a website for local gym in Belgrade.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="projekat1">
+                    <img src="assets/imgs/projekat2.jpg" alt="Projekat 2"/>
+                    <div class="layer">
+                        <h3>Portfolio page</h3>
+                        <p>I made a this page about me.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="projekat1">
+                    <img src="assets/imgs/projekat3.jpg" alt="Projekat 3"/>
+                    <div class="layer">
+                        <h3>More to be made</h3>
+                        <p>More coming soon.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="podnaslov">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>dimitrije.cvijic.187.22@ict.edu.rs</p>
+                    <p><i class="fa-solid fa-phone"></i>+381 604338868</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/cvijic__" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                    <a href="#" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message"_rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2023 Dimitrije Cvijić</p>
+            <a href="assets/style/style.css" target="_blank"><i class="fa-brands fa-css3-alt"></i></a>
+            <a href="assets/style/style.scss" target="_blank"><i class="fa-brands fa-sass"></i></a>
+            <a href="" target="_blank"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu(){
+        sidemeu.style.right ="0";
+        }
+        function closemenu() {
+        sidemeu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>
